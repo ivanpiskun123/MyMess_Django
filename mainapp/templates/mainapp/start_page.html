@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{%  block title  %}
+    MyCell start
+{% endblock %}
+
+{% block main_buttons_in_navbar  %}
+{% endblock %}
+
+{% block cell_name %}
+{% endblock %}
+
+
+{% block content %}
+
+
+
+    <div>
+            <div class="row text-white">
+            -
+            </div>
+            <div class="row text-white">
+            -
+            </div>
+            <div class="row text-white">
+            -
+            </div>
+            <div class="row text-white">
+            -
+            </div>
+            <div class="row text-white">
+            -
+            </div>
+            <div class="row text-white">
+            -
+            </div>
+            <div class="row text-white">
+            -
+            </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class=" col-lg-3">
+                <span>
+            <a href="{% url 'create_mess_url' %}" class="btn  btn-lg active mainbuttons rounded-pill bg-dark text-white" role="button" aria-pressed="true">
+                        Write
+            </a>
+        </span>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class=" col-lg-6">
+
+            <span>
+        <a href="{% url 'login_cell_url' %}" class="btn  btn-lg active mainbuttons rounded-pill  bg-dark text-white" role="button" aria-pressed="true">
+            View
+        </a>
+       </span>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

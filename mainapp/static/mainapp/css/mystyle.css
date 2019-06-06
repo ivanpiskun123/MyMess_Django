@@ -1,0 +1,62 @@
+.navbar{
+background-color : #e3e3e6;
+height: 170px !important;
+}
+
+#maintext{
+font-size: 250%;
+}
+.explainMS, span{
+font-family: Century Gothic;
+}
+
+span{
+text-decoration: underline;
+font-size: 220%;
+margin-top: -20px;
+}
+span:hover{
+text-decoration: none;
+}
+
+.explainMS{
+font-size: 220%;
+}
+
+.btn-secondary{
+font-size: 160%;
+}
+
+#logo{
+margin-right: 65px;
+margin-top: -28px;
+}
+
+#explainMSbtn{
+margin-top: 25px;
+margin-top: 25px;
+}
+
+.mainbuttons{
+min-width: 500px;
+min-height: 200px;
+text-margin: center;
+width:75px;
+padding:80px;
+font-size:125%;
+
+}
+
+
+.inNav{
+min-width: 140px;
+min-height: 70px;
+padding:17px;
+font-size:145%;
+}
+
+.rounded-circle{
+width:56px;
+height: 56px;
+font-size:80%;
+}

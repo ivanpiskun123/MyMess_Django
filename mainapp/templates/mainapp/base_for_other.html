@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block main_buttons_in_navbar  %}
+    <a href="{% url 'create_mess_url' %}" class="btn btn-lg bg-dark text-white rounded-pill active inNav" role="button" aria-pressed="true">
+        Write
+    </a>
+    <a href="{% url 'login_cell_url' %}" class="btn btn-lg  bg-dark text-white rounded-pill active inNav" role="button" aria-pressed="true">
+        View
+    </a>
+{% endblock %}
