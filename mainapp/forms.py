@@ -20,9 +20,7 @@ class AddMessageForm(forms.ModelForm):
         fields = ['text']
 
         widgets = {
-        'text' : forms.Textarea(attrs={'rows': 7,'cols':100,'placeholder': 'Enter text'})
-
-                                       }
+        'text' : forms.Textarea(attrs={'rows': 7,'cols':100,'placeholder': 'Enter text'})}
 
 
 class LoginCellForm(forms.Form):
@@ -30,7 +28,7 @@ class LoginCellForm(forms.Form):
     cell = forms.CharField(max_length=100, widget=forms.TextInput(attrs={
         'class': 'form-control-lg',
         'autocomplete': 'off',
-    'placeholder': 'Enter cell'}))
+        'placeholder': 'Enter cell'}))
 
 
 
