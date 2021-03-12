@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'mymess.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'mycell_db',
         'USER': 'admin',

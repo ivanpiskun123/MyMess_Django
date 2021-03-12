@@ -2,106 +2,118 @@
 
 
 {%  block title  %}
-    MyCell view messages
+MyCell view messages
 {% endblock %}
 
 {% block main_buttons_in_navbar %}
-    <!-- Button trigger modal -->
-        <a href="" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" data-toggle="modal" data-target="#exampleModal">
-                Exit cell
-        </a>
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-body">
-                  <div class="alert alert-primary" role="alert" style="font-family: Century Gothic;font-size: 150%">
+<!-- Button trigger modal -->
+<a href="" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" data-toggle="modal"
+   data-target="#exampleModal">
+    Exit cell
+</a>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="alert alert-primary" role="alert" style="font-family: Century Gothic;font-size: 150%">
                     Do you really want to exit the cell?
-                  </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-light btn-lg" class="close" data-dismiss="modal" aria-label="Close">No,back to cell</button>
-                  <button type="submit" formaction="{% url 'mainpage_url' %}" class="btn btn-secondary btn-lg">Exit cell</button>
-
-              </div>
+                </div>
             </div>
-          </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light btn-lg" class="close" data-dismiss="modal"
+                        aria-label="Close">No,back to cell
+                </button>
+                <button type="submit" formaction="{% url 'mainpage_url' %}" class="btn btn-secondary btn-lg">Exit cell
+                </button>
+
+            </div>
         </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block cell_name %}
-    {{cell.name}}
+{{cell.name}}
 {% endblock %}
 
 
 {% block content %}
-        <p>
-             <div class="container-fluid">
-                <div class="alert alert-light" role="alert" style="font-size: 160%">
-                    After leaving the cell, it will be deleted with all messages.
-                </div>
-             </div>
-        </p>
-        <div class="row" style="font-color: white;">
-            --
-        </div>
-
-
-    {% for message in messages %}
-
-
-        <div class="row">
-            <div class="container">
-                <div class="form-control">
-            <div class="card">
-              <h5 class="card-header">{{message.date_create}}</h5>
-              <div class="card-body">
-                <p class="card-text">{{message.text|truncatewords:12}}</p>
-                  <button type="button" class="btn btn-outline-dark rounded-circle" data-toggle="modal" data-target="#myModal{{message}}">Read</button>
-              </div>
-            </div>
-                </div>
-        </div>
-
-        </div>
-        <div>
- <div class="row" style="font-color: white;">
-            --
-        </div> <div class="row" style="font-color: white;">
-            --
-        </div>
- <div class="row" style="font-color: white;">
-            --
-        </div> <div class="row" style="font-color: white;">
-            --
-        </div>
- <div class="row" style="font-color: white;">
-            --
-        </div> <div class="row" style="font-color: white;">
-            --
-        </div>
- <div class="row" style="font-color: white;">
-            --
-        </div> <div class="row" style="font-color: white;">
-            --
-        </div>
+<p>
+<div class="container-fluid">
+    <div class="alert alert-light" role="alert" style="font-size: 160%">
+        After leaving the cell, it will be deleted with all messages.
+    </div>
 </div>
-        <!-- Modal -->
-        <div class="modal fade" id="myModal{{message}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLongTitle" style="font-size:150%">{{message.date_create}}</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        X
-                  </button>
-              </div>
-              <div class="modal-body" style="font-family: Century Gothic; font-size: 200%">
-                {{message.text}}
-              </div>
+</p>
+<div class="row" style="font-color: white;">
+    --
+</div>
+
+
+{% for message in messages %}
+
+
+<div class="row">
+    <div class="container">
+        <div class="form-control">
+            <div class="card">
+                <h5 class="card-header">{{message.date_create}}</h5>
+                <div class="card-body">
+                    <p class="card-text">{{message.text|truncatewords:12}}</p>
+                    <button type="button" class="btn btn-outline-dark rounded-circle" data-toggle="modal"
+                            data-target="#myModal{{message}}">Read
+                    </button>
+                </div>
             </div>
-          </div>
         </div>
+    </div>
+
+</div>
+<div>
+    <div class="row" style="font-color: white;">
+        --
+    </div>
+    <div class="row" style="font-color: white;">
+        --
+    </div>
+    <div class="row" style="font-color: white;">
+        --
+    </div>
+    <div class="row" style="font-color: white;">
+        --
+    </div>
+    <div class="row" style="font-color: white;">
+        --
+    </div>
+    <div class="row" style="font-color: white;">
+        --
+    </div>
+    <div class="row" style="font-color: white;">
+        --
+    </div>
+    <div class="row" style="font-color: white;">
+        --
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal{{message}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle" style="font-size:150%">{{message.date_create}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    X
+                </button>
+            </div>
+            <div class="modal-body" style="font-family: Century Gothic; font-size: 200%">
+                {{message.text}}
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endfor %}
 {% endblock %}
